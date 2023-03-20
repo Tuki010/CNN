@@ -199,8 +199,21 @@
     /*将所有线性表Lb中但不在La中的数据插入La中*/
     void union(List *La,List Lb)
     {
-      
+      int La_len,Lb_len,i;
+      ElemType e;     /*声明与La和Lb相同数据元素e*/
+      La_len = ListLength(La); /*求线性表的长度*/
+      Lb_len = ListLength(Lb);
+      for (i = 1;i < =Lb_len；i++ )
+        {
+          GetElem(Lb,i,e);  /*取Lb中第i个数据元素赋值给e*/
+          if(!LocateElem(La ,++La_len,equal))  /*La中不存在和e相同数据元素*/
+            ListInsert(La,++La_len,e)；/*插入*/
+        }
     }
+  线性表的顺序存储结构
+    定义：指的是用一段地址连续的存储单元依次存储线性表的数据元素。
+    顺序存储方式：
+      
 第四章 栈与队列
 第五章 串
 第六章 树
