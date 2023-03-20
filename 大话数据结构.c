@@ -244,6 +244,29 @@
         *e = L.data[ i-1 ];
         return OK;
       }
+    插入操作
+      思路 
+        如果位置不合理，抛出异常；
+        如果线性表长度大于等于数组长度，则抛出异常或动态增加容量；
+        从最后一个元素开始向前遍历到第i个位置，分别将它们都向后移动一位；
+        将插入元素填入位置i处
+        表长加1。
+      代码如下
+        /*初始条件：顺序线性表L已存在。1 <= i <=listLength(L)*/
+        /*操作结果：在L中第i个位置之前插入新的数据元素e，L的长度增加1*/
+        Status ListInsert(Sqlist *L,int i ,ElemType e)
+          {
+            int k;
+            if (L->length == MAXSIZE)       /*顺序线性表已满*/
+              returen ERROR;
+            if (i < 1 || i >L->length+1)    /*当i不在范围内*/
+              for(k = L-> length ; k >= i-1; kp--)  /*将要插入位置后的数据元素向后移动一位*/
+                L->data[k+1] = L->data[k]
+            L->data[i-1]=e;   /*将新元素插入*/
+            L->length++;
+            return OK;    
+          }
+          
 第四章 栈与队列
 第五章 串
 第六章 树
