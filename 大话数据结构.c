@@ -221,7 +221,29 @@
           ElemType data[MAXSIZE];  /*数组存储数据元素，最大值为MAXSIZE */
           int length;              /*线性表当前长度*/
         }sqList;
-      
+      数据长度与线性表长度的区别
+        数组的长度是存放线性表的存储空间的长度，存储分配后这个量一般是不变的。
+        线性表的长度是线性表中数据元素的个数，随着线性表插入和删除操作的进行，这个量是变化的。
+      地址计算方法
+        C语言中数组是从0开始第一个下标的，于是线性表的第i个元素是要存储在数组下标为 i-1 的位置，即数据元素的序号和存放它的数组下标之间存在对应关系。
+        存储器中的每个存储单元都有自己的编号，这个编号称为地址。
+  顺序存储结构的插入与删除
+    获得元素的操作
+      #define OK 1
+      #define ERROR 0
+      #define TRUE 1
+      #define FALSE 0
+      typedef int Status;
+      /*Status 是函数的类型，其值是函数结果状态代码，如OK等*/
+      /*初始条件：顺序线性表L已存在，1 <= i <= Listlength(L)*/
+      /*操作结果：用e返回L中第i个数据元素的值*/
+      Status GetElem(SqList L;int i,ElemTpye *e)
+      {
+        if(L.length == 0 || i < 1 || i > L.length)
+          return ERROR;
+        *e = L.data[ i-1 ];
+        return OK;
+      }
 第四章 栈与队列
 第五章 串
 第六章 树
