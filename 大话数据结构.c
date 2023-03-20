@@ -195,7 +195,12 @@
         ListDelete(*L,i,*e):删除线性表L中第i个元素，并用e返回其值。
         ListLength(L):返回线性表的个数。
     endADT
-  
+  假设将La表示集合A，Lb表示i集合B，则实现思路如下：
+    /*将所有线性表Lb中但不在La中的数据插入La中*/
+    void union(List *La,List Lb)
+    {
+      
+    }
 第四章 栈与队列
 第五章 串
 第六章 树
