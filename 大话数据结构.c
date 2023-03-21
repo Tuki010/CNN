@@ -266,7 +266,34 @@
             L->length++;
             return OK;    
           }
-          
+      删除操作
+        思路
+          删除位置不合理，抛出异常。
+          取出删除元素。
+          从删除元素位置开始遍历到最后一个元素位置，分别将它们都向前移一个位置。
+          表长减一。
+        代码
+          /*初始条件：顺序线性表L已存在，1 <= i <= ListLength(L)*/
+          /*操作结果：删除L的第i个元素，并用e返回其值，L的长度减一*/
+          Status ListDelete(SqList *L,int i,ElemType *e)
+          {
+            int k ;
+            if(L->length==0)  /*线性表为空*/
+              return ERROR;
+            if(i<1 || i>L->length)/*删除位置不正确*/
+              return ERROR;
+            *e = L->length[i-1]
+            if(i<L->length)   /*如果删除不是最后位置*/
+            {
+              for( k=i; k<L->length;K++) /*将删除位置后继元素前移*/
+                L->data[K-1]=L->data[k]
+            }
+            L->length--
+            return OK;
+          }
+  线性表的链式存储结构
+    链式存储结构定义
+    
 第四章 栈与队列
 第五章 串
 第六章 树
