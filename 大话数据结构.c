@@ -303,7 +303,19 @@
         struct Node *next
       }Node；
       typedef struct Node *LinkList；/*定义 LinkList*/
-      
+  单链表的读取
+    算法思路
+      1.声明一个结点p指向链表第一个结点，初始话j从1开始；
+      2.当j<i时，就遍历链表，让p的指针向后移动，不断指向下一结点，j累加1；
+      3.若到链表末尾p为空，则说明第i个元素不存在；
+      4.否则查找成功，返回结点p的数据。
+    代码：
+      /*初始条件：顺序线性表L已存在，1<=i<=ListLength(L)*/
+      /*操作结果：用e返回L中第i个数据元素的值*/
+      Status GetElem(LinkList L,int i,Elemtype *e)
+      {
+        
+      }
 第四章 栈与队列
 第五章 串
 第六章 树
