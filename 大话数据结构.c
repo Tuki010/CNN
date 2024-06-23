@@ -314,8 +314,53 @@
       /*操作结果：用e返回L中第i个数据元素的值*/
       Status GetElem(LinkList L,int i,Elemtype *e)
       {
-        
+        int j;
+        LinkList p;/*声明一个节点p*/
+        p = L->next;/*让p指向链表L的第一个节点*/
+        j = 1;/*j为计数器*/
+        while (p && j < i)/*当p不为空或者计数器j不等于i时，循环*/
+          p = p ->next;/*p指向下一个节点*/
+          ++j;
+        if ( !p || j > 1)/*j大于1且p为空*/
+          return  ERROR;/* 第i个不存在*/
+        *e = p->data;/*取第i个元素的数据*/
+        return OK;
       }
+  单链表的插入
+    实现代码
+      /*初始条件：顺序线性表L已经存在，1 = < i = < ListLength(L)*/
+      /*操作结果：在L中第i个位置之前插入新的元素e，L的长度加1*/
+      Status ListInsert(LinkList *L, int i , ElemType e)
+      {
+        int j;
+        LinkList p,s;
+        p = *L;
+        j = 1;
+        while ( p && j < i)
+          {
+            p = p->next;
+            ++j;
+          }
+        if (!p || j > i)
+          return ERROR;
+        s = (LinkList) malloc(sizeof(Node));
+        s -> data = e;
+        s -> next = p->next ;
+        p -> next = s;
+        return OK;
+      }
+  单链表的删除
+    Status ListDelete(LinkList *L, int i ,  ElemType *e)
+    {
+      int j;
+      LinkList p,q;
+      p = *L;
+      j = 1 ;
+      while (p -> next && j = 1 )
+      {
+        p = 
+      }
+    }
 第四章 栈与队列
 第五章 串
 第六章 树
