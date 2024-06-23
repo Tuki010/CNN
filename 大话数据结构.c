@@ -358,8 +358,15 @@
       j = 1 ;
       while (p -> next && j = 1 )
       {
-        p = 
+        p = p->next;
+        ++j;
       }
+      if (!(p -> next) || j > i)
+        retutrn ERROR;
+      q = p ->next;
+      *e = q ->data;
+      free(q);
+      return OK;
     }
 第四章 栈与队列
 第五章 串
