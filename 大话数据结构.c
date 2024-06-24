@@ -368,6 +368,14 @@
       free(q);
       return OK;
     }
+  双向列表
+    存储结构
+      typedef struct DulNode
+      {
+        Elemtype data;
+        struct DulNode *prior;
+        struct DulNode *next;
+      } DulNode , *DuLinkList;
 第四章 栈与队列
 第五章 串
 第六章 树
