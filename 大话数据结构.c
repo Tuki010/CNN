@@ -377,6 +377,22 @@
         struct DulNode *next;
       } DulNode , *DuLinkList;
 第四章 栈与队列
+  栈是仅限于在表尾进行插入和删除操作的线性表
+  栈是后进先出的线性表
+  栈的抽象数据类型
+    ADT 栈(stack)
+    Data
+      同线性表。元素具有相同的类型，相邻元素具有前驱和后继关系。
+    Operation
+      InitStack(*s)
+      DestoryStack(*s)
+      ClearStack(*s)
+      StackEmpty(s)
+      GetTOP(s , *e)
+      Push(*s , e)
+      Pop(*s, e )
+      StackLength(s)
+    endADT
 第五章 串
 第六章 树
 第七章 图
