@@ -455,6 +455,19 @@
       }
       return OK;
     }
+  链式栈
+    存储结构
+      typedef struct StackNode
+      {
+        SElemType data;
+        struct StackNode *next;
+      }StackNode,*LinkStackPtr;
+      typedef struct LinkStack
+      {
+        LinkStackPtr top;
+        int count;
+      }LinkStack;
+  进栈
 第五章 串
 第六章 树
 第七章 图
