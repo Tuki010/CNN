@@ -428,7 +428,33 @@
         int top1;
         int top2;
       }SqDoubleStack;
-  
+  栈的输入与输出
+    Status Push(SqDoubleStack *s, SElempty e, int stackNumber)
+    {
+      if(S->top+1 == S->top2)
+        return ERROR;
+      if(stackNumber == 1)
+        S->stack[++S->top] = e;
+      else if(stackNumber == 2)
+        S->data[--S->top2] = e;
+      return OK;
+    }
+     Status Pop(SqDoubleStack *s, SElempty e, int stackNumber)
+    {
+      if(stackNumber == 1)
+      {
+        if(S->top1==1)
+          return ERROR;
+        *e = S->data[S->top1--];
+      }
+      else if(stackNumber == 2)
+      {
+        if(S->top2==MAXSIZE)
+          return ERROR;
+        *e = S->data[S->top2++]
+      }
+      return OK;
+    }
 第五章 串
 第六章 树
 第七章 图
