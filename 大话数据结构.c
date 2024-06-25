@@ -412,7 +412,23 @@
       return OK;
     }
   出栈操作
-    
+    Status Pop(SqStack *S, SElempty *e)
+    {
+      if(s->top == -1)
+        return ERROR;
+      *e = s->data[s->top];
+      s->top--;
+      return OK;
+    }
+  两栈共享空间
+    储存结构
+      typedef struct
+      {
+        SElemType data[MAXSIZE];
+        int top1;
+        int top2;
+      }SqDoubleStack;
+  
 第五章 串
 第六章 树
 第七章 图
