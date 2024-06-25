@@ -393,6 +393,26 @@
       Pop(*s, e )
       StackLength(s)
     endADT
+  栈的定义结构
+    typedef int SElemType;
+    typedef struct
+    {
+      SElemType data[MAXSIZE]
+      int top;
+    }SqStack;
+  进栈操作
+    status push (SqStack *S, SElemtype e)
+    {
+      if( S -> top == MAXSIZE-1)
+      {
+        return ERROR;
+      }
+      S->top++;
+      S->data[S->top] = e;
+      return OK;
+    }
+  出栈操作
+    
 第五章 串
 第六章 树
 第七章 图
