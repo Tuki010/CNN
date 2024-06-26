@@ -478,6 +478,19 @@
       return OK;
     }
   出栈
+    Status Pop(LinkStack *s,SElemType *e)
+    {
+      LinkStackPtr p;
+      if(StackEmpty(*S))
+        return ERROR;
+      *e = S->top->data;
+      p = S->top;
+      S->top = S->top->next;
+      free(p);
+      S->count--;
+      return OK;
+    }
+  栈的递归
     
 第五章 串
 第六章 树
