@@ -468,6 +468,10 @@
         int count;
       }LinkStack;
   进栈
+    Status Push(LinkStack *s ,SElempty e)
+    {
+      
+    }
 第五章 串
 第六章 树
 第七章 图
