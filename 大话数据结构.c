@@ -470,8 +470,15 @@
   进栈
     Status Push(LinkStack *s ,SElempty e)
     {
-      
+      LinkStackPtr s = (LinkStackPtr)malloc(sizeof(StackNode));
+      s->data = e;
+      s->next =S->top;
+      S->top = s;
+      S->count++;
+      return OK;
     }
+  出栈
+    
 第五章 串
 第六章 树
 第七章 图
