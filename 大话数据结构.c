@@ -509,6 +509,20 @@
     后缀
   队列的定义
       Queue 只允许在一端进行插入操作，而在另一端进行删除操作的线性表。特征为先进先出,FIFO。
+  队列抽象数据类型
+    ADT队列(Queue)
+    Data
+      同线性表。元素具有相同的类型，相邻的元素具有前驱和后继关系。
+    Operation
+      InitQueue(*Q)
+      DestroyQueue(*Q)
+      ClearQueue(*Q)
+      QueueEmpty(Q)
+      GetHead(Q,*e)
+      EnQueue(*Q,e)
+      DeQueue(*Q,*e)
+       QueueLength(Q)
+    endADT
   
 第五章 串
 第六章 树
