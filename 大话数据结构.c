@@ -491,7 +491,25 @@
       return OK;
     }
   栈的递归
-    
+    斐波那契数列
+      int Fbi(int)
+      {
+        if(i < 2)
+          return i == 0 ? 0 :1;
+        return Fbi( i - 1) + Fbi(i -2);
+      }
+      int main()
+      {
+        int i;
+        for(int i =0;i < 40 ;i ++)
+          printf("%d" , Fbi(i));
+        return 0
+      }
+  栈的应用——四则运算表达式求值
+    后缀
+  队列的定义
+      Queue 只允许在一端进行插入操作，而在另一端进行删除操作的线性表。特征为先进先出,FIFO。
+  
 第五章 串
 第六章 树
 第七章 图
